@@ -13,5 +13,4 @@ jobs:
          key: student-test-{{ .Branch }}-{{ checksum "package-lock.json" }}
          paths:
            - "node_modules"
-     - run: npm run test -- --single-run --no-progress --browser=ChromeHeadlessCI
-     - run: npm run e2e
+     - run: npm run test -- --watch=false
